@@ -1,4 +1,7 @@
 <?php
+
+namespace App;
+
 class Course
 {
     public function __construct(
@@ -11,6 +14,7 @@ class Course
         protected ?string $public_date = null,
         protected bool $archived = false,
         protected array $lvls = [],
+        protected CourseType $type = CourseType::FREE
     ) {}
 
     public function __get($name)
@@ -34,8 +38,8 @@ class Course
 
         // 2. Generar el HTML principal con todos los datos
         $html = "
-            <h2 class='text-3xl font-bold text-blue-400'>
-                $this->title
+            <h2 class='text-3xl font-bold text-blue-400 mb-2 futuristic-shadow'>
+                $this->title - " . strtoupper($this->type->label()) . "
             </h2>
             <h3 class='mb-4 border-b border-blue-600/50 pb-2'>
                 $this->subtitle

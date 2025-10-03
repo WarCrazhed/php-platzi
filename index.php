@@ -1,9 +1,11 @@
 <?php
 
-require 'Course.php';
+require __DIR__ . '/vendor/autoload.php';
+
+use App\Course;
+use App\CourseType;
 
 $course = new Course(
-    // ... (Parámetros del constructor) ...
     title: 'Curso profesional de PHP y Laravel: Inmersión Total',
     subtitle: 'Aprende PHP y Laravel desde cero',
     description: 'Sumérgete en el ecosistema de PHP y Laravel',
@@ -29,19 +31,9 @@ $course = new Course(
             'description' => 'Ideal para estudiantes con conocimientos solidos de programación'
         ]
     ],
-    lvl: 'Intermedio'
+    lvl: 'Intermedio', 
+    type: CourseType::PAID
 );
-
-// ... (Llamadas a addTag) ...
-$course->addTag('MySQL');
-$course->addTag('CSS');
-$course->addTag('Frameworks');
-$course->addTag('Desarrollo de Software');
-$course->addTag('PHP');
-$course->addTag('');
-$course->addTag('HTML');
-
-// Eliminamos el código de filtrado y $status, ya que se manejan dentro de la clase
 
 ?>
 <!DOCTYPE html>
