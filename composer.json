@@ -5,6 +5,14 @@
         }
     },
     "require": {
-        "ardagnsrn/ollama-php": "^1.0"
+        "ardagnsrn/ollama-php": "^1.0",
+        "openai-php/client": "^0.17.0",
+        "guzzlehttp/guzzle": "^7.10",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }

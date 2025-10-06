@@ -1,10 +1,17 @@
 #!/usr/bin/env php
 <?php
 
+use Dotenv\Dotenv;
+
 require __DIR__ . '/../vendor/autoload.php';
 
+$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
 // $aiService = new App\FakeAiService();
-$aiService = new App\OllamaService();
+// $aiService = new App\OllamaService();
+// $aiService = new App\OpenAiService();
+$aiService = new App\OpenRouterService();
 
 echo 'Ask anything to AI' . PHP_EOL;
 
