@@ -10,3 +10,4 @@ $dotenv->load();
 // $aiService = new App\OpenAiService();
 $aiService = new App\OpenRouterService();
 
+return new App\Chat($aiService);

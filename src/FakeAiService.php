@@ -2,7 +2,7 @@
 
 namespace App;
 
-class FakeAiService
+class FakeAiService implements AiServiceInterface
 {
     public function getResponse(string $question): string
     {

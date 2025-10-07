@@ -4,7 +4,7 @@ namespace App;
 
 use GuzzleHttp\Client;
 
-class OpenRouterService
+class OpenRouterService implements AiServiceInterface
 {
     protected $client;
 
